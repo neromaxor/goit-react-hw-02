@@ -13,7 +13,7 @@ function App() {
       return savedData;
     }
 
-    return { good, neutral, bad };
+    return { good: 0, neutral: 0, bad: 0 };
   });
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function App() {
   const pozitivMath = Math.round(((good + neutral) / totalFeedback) * 100);
 
   return (
-    <div>
+    <div className="App">
       <Description />
       <Options
         isFeedback={isFeedback}

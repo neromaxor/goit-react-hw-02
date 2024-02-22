@@ -17,11 +17,21 @@ export default function Options({ setFeedback, resetFeedback, isFeedback }) {
   };
 
   return (
-    <div>
-      <button onClick={() => handleFeedback("good")}>Good</button>
-      <button onClick={() => handleFeedback("neutral")}>Neutral</button>
-      <button onClick={() => handleFeedback("bad")}>Bad</button>
-      {isFeedback && <button onClick={resetButton}>Reset</button>}
+    <div className={css.buttons}>
+      <button className={css.button} onClick={() => handleFeedback("good")}>
+        Good
+      </button>
+      <button className={css.button} onClick={() => handleFeedback("neutral")}>
+        Neutral
+      </button>
+      <button className={css.button} onClick={() => handleFeedback("bad")}>
+        Bad
+      </button>
+      {isFeedback && (
+        <button className={css.button} onClick={resetButton}>
+          Reset
+        </button>
+      )}
     </div>
   );
 }

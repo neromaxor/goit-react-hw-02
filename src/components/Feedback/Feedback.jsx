@@ -3,12 +3,12 @@ import css from "./Feedback.module.css";
 export default function Feedback({ value, totalFeedback, pozitivMath }) {
   const { good, neutral, bad } = value;
   return (
-    <div>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total {totalFeedback}</p>
-      <p>Pozitiv: {pozitivMath}%</p>
+    <div className={css.feedbackContainer}>
+      <p className={css.feedback}>Good: {good}</p>
+      <p className={css.feedback}>Neutral: {neutral}</p>
+      <p className={css.feedback}>Bad: {bad}</p>
+      <p className={css.feedback}>Total {totalFeedback}</p>
+      <p className={css.feedback}>Pozitiv: {pozitivMath}%</p>
     </div>
   );
 }
